@@ -1,8 +1,6 @@
 # PROJECT: date_detection.py - A simple python program that detects if a given
 # date is valid.
 
-# AUTHOR: Muadz Shakir
-
 import re
 
 # Try to catch any AttributeError arising when any string input does
