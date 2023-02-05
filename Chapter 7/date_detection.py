@@ -71,7 +71,7 @@ February.")
             else:
                 print(valid())
 
-# Catches any error so program tells user date format is not correct, instead
+# Catches any error so program tells the user date format is not correct, instead
 # of crashing program.
 except AttributeError:
     print("Format does not follow DD/MM/YYYY. Please enter a date.")
