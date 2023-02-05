@@ -3,7 +3,7 @@
 
 import re
 
-user_input = input("Enter string: ")
+user_input = input("\nEnter string: ")
 argument_input = input("Enter argument to remove character (Enter to skip): ")
 
 # Regex that finds trailing beginning and ending spaces.
