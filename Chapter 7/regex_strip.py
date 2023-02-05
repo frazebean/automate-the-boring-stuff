@@ -1,4 +1,5 @@
-# PROJECT: regex_strip.py - A python regex that functions similarly to the strip() function.
+# PROJECT: regex_strip.py - A python regex that functions similarly to the
+# strip() function.
 
 import re
 
@@ -9,10 +10,7 @@ argument_input = input("Enter argument to remove character (Enter to skip): ")
 space_regex = re.compile(r"^\s+|\s+$")
 space_detected = space_regex.search(user_input)
 
-# Any trailing space detected will be replaced with "" (no space).
-if space_detected is not None:
-    no_space = user_input.replace(space_detected.group(), "")
-    print(no_space)
+
 def regex_strip(user_input, argument_input):
     if argument_input == "":
         space_regex = re.compile(r"^\s+|\s+$")
@@ -24,7 +22,7 @@ def regex_strip(user_input, argument_input):
         else:
             print(user_input)
     else:
-        character_regex = re.compile(r"\S")
+        character_regex = re.compile(r".")
         characters_detected = character_regex.findall(user_input)
 
         final_word = []
@@ -34,9 +32,9 @@ def regex_strip(user_input, argument_input):
                 final_word.append(x)
             else:
                 final_word.append(character)
-        
+
         for i in final_word:
-            final_word
+            print(i, end='')
 
 
 regex_strip(user_input, argument_input)
