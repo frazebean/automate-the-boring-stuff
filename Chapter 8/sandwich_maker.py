@@ -52,10 +52,10 @@ else:
     pass
 
 # User can choose how many sandwiches they want.
-sandwich_number = pyip.inputInt("How many sandwiches would you like? : ", min=1)
+sandwich_number = pyip.inputInt("\nHow many sandwiches would you like? : ", min=1)
 
 total_price = sandwich_number * (price[bread_type] + price[protein_type] + price[cheese_type]
                                  + price['mayonnaise'] + price['mustard'] + price['lettuce'] +
                                  price['tomato'])
 
-print(total_price)
+print(f"${total_price}")
