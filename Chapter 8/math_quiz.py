@@ -38,3 +38,5 @@ for question_number in range(number_of_questions):
 
             print(f"Incorrect. Try again. You have {3 - tries} tries left.")
             continue
+
+print(f"Your score is {correct_answers}/{number_of_questions}.")
