@@ -11,11 +11,13 @@ price = {"wheat": 3, "white": 3.50, "sourdough": 4, "chicken": 2, "turkey": 4,
 print("\nWelcome to the sandwich maker! Choose your sandwich below.")
 
 # User prompted to choose bread type. Cannot be left blank or have wrong input.
-bread_type = pyip.inputMenu(["wheat", "white", "sourdough"], prompt="\nBread type:\n")
+bread_type = pyip.inputMenu(
+    ["wheat", "white", "sourdough"], prompt="\nBread type:\n")
 print(f"\nYou chose {bread_type}. Price is ${price[bread_type]}")
 
 # User prompted to choose protein type. Cannot be left blank or have wrong input.
-protein_type = pyip.inputMenu(["chicken", "turkey", "ham", "tofu"], prompt="\nProtein type:\n")
+protein_type = pyip.inputMenu(
+    ["chicken", "turkey", "ham", "tofu"], prompt="\nProtein type:\n")
 print(f"\nYou chose {protein_type}. Price is ${price[protein_type]}")
 
 # User has the option of either having cheese or not.
@@ -23,7 +25,8 @@ cheese_option = pyip.inputYesNo("\nWould you like cheese? (yes/no):\n")
 
 # If user chooses "yes", they have 3 varieties of cheeses to choose from.
 if cheese_option == "yes":
-    cheese_type = pyip.inputMenu(["cheddar", "swiss", "mozzarella"], prompt="\nCheese type:\n")
+    cheese_type = pyip.inputMenu(
+        ["cheddar", "swiss", "mozzarella"], prompt="\nCheese type:\n")
     print(f"\nYou chose {cheese_type}. Price is ${price[cheese_type]}")
 
 # 4 yes/no questions for condiments given to the user to choose from.
@@ -52,7 +55,8 @@ else:
     pass
 
 # User can choose how many sandwiches they want.
-sandwich_number = pyip.inputInt("\nHow many sandwiches would you like? : ", min=1)
+sandwich_number = pyip.inputInt(
+    "\nHow many sandwiches would you like? : ", min=1)
 
 total_price = sandwich_number * (price[bread_type] + price[protein_type] + price[cheese_type]
                                  + price['mayonnaise'] + price['mustard'] + price['lettuce'] +
