@@ -1,5 +1,5 @@
-# PROJECT: regex_strip.py - A python regex that functions similarly to the
-# strip() function.
+# regex_strip.py - Program that behaves very similarly to Python's
+# in-built strip() function.
 
 import re
 

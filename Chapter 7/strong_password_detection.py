@@ -1,5 +1,5 @@
-# PROJECT: strong_password_detection.py - A simple program utilising regular
-# expressions which determines if a password string passed is strong.
+# strong_password_detection.py - A program using regular expressions to
+# detect if a password entered matches arbitrary constraints.
 
 import re
 

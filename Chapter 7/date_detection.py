@@ -1,3 +1,6 @@
+# date_detection.py - A program that utilises regular expressions to
+# see if a date entered is correct.
+
 import re
 
 # Try to catch any AttributeError arising when any string input does
