@@ -1,5 +1,5 @@
 # sandwich_maker.py - A program that asks users for their sandwich
-# preference and displays the total cost of the ingredients using the
+# preferences and displays the total cost of the ingredients using the
 # PyInputPlus module.
 
 import pyinputplus as pyip
