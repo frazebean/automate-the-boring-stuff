@@ -4,22 +4,19 @@ import re
 
 text_file = open("C:/Users/muadz/Documents/MadLibs.txt")
 text_content = text_file.read()
-modified_text = []
 
-for word in re.split(r"\W", text_content):
-    if "ADJECTIVE" in word:
+split_text_content = re.findall(r"[\w]+|[.,!?;'()]", text_content)
+
+print(split_text_content)
+
+for index, item in enumerate(split_text_content):
+    if "ADJECTIVE" in item:
         adjective_input = input("Enter an adjective: ").strip()
-        modified_text.append(adjective_input)
-    elif "NOUN" in word:
+    elif "NOUN" in item:
         noun_input = input("Enter a noun: ").strip()
-        modified_text.append(noun_input)
-    elif "ADVERB" in word:
+    elif "ADVERB" in item:
         adverb_input = input("Enter an adverb: ").strip()
-        modified_text.append(adverb_input)
-    elif "VERB" in word:
+    elif "VERB" in item:
         verb_input = input("Enter a verb: ").strip()
-        modified_text.append(verb_input)
-    else:
-        modified_text.append(word)
 
-print(modified_text)
+
