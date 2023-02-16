@@ -1,8 +1,9 @@
 # madlibs.py - A python madlibs program.
 
+from pathlib import Path
 import re
 
-text_file = open("C:/Users/muadz/Documents/MadLibs.txt")
+text_file = open(Path.home()/"Documents"/"MadLibs.txt")
 text = text_file.read()
 text_file.close()
 
@@ -32,6 +33,6 @@ final_text = changed_split_text.replace(' .', '.').replace(' ,', ',').\
     replace(' ?', '?').replace(' !', '!')
 print(final_text)
 
-complete_text_file = open("C:/Users/muadz/Documents/NewMadLibs.txt", 'w')
+complete_text_file = open(Path.home()/"Documents"/"NewMadLibs.txt", 'w')
 final_text_file = complete_text_file.write(final_text)
 complete_text_file.close()
