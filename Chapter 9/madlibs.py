@@ -1,41 +1,37 @@
-# madlibs.py - A madlibs program.
+# madlibs.py - A python madlibs program.
 
 import re
 
-# Open existing 'MadLibs.txt' document to be updated by the player.
-text_file = open("C:/Users/muadz/Documents/Madlibs.txt")
+text_file = open("C:/Users/muadz/Documents/MadLibs.txt")
 text = text_file.read()
+text_file.close()
 
-# Regular expression for player to replace parts of speech with custom words.
-madlibs_regex = re.compile(r"ADJECTIVE|NOUN|ADVERB|VERB")
-madlibs_found = madlibs_regex.findall(text)
+split_text = re.findall(r"[\w]+|[^\s\w]", text)
 
-# Initialise parts of speech input so no error is thrown if a part of speech
-# is not present.
-adjective_input = ''
-noun_input = ''
-adverb_input = ''
-verb_input = ''
+changed_split_text_list = []
 
-# Parts of speech in text found to be replaced by user input.
-for word in madlibs_found:
-    if word == "ADJECTIVE":
+for item in split_text:
+    if item == "ADJECTIVE":
         adjective_input = input("Enter an adjective: ").strip()
-    elif word == "NOUN":
+        changed_split_text_list.append(adjective_input)
+    elif item == "NOUN":
         noun_input = input("Enter a noun: ").strip()
-    elif word == "ADVERB":
+        changed_split_text_list.append(noun_input)
+    elif item == "ADVERB":
         adverb_input = input("Enter an adverb: ").strip()
-    elif word == "VERB":
+        changed_split_text_list.append(adverb_input)
+    elif item == "VERB":
         verb_input = input("Enter a verb: ").strip()
+        changed_split_text_list.append(verb_input)
+    else:
+        changed_split_text_list.append(item)
 
-# Replace parts of speech with user input.
-modified_text = text.replace("ADJECTIVE", adjective_input)\
-    .replace("NOUN", noun_input).replace("ADVERB", adverb_input)\
-    .replace("VERB", verb_input)
+changed_split_text = " ".join(changed_split_text_list)
 
-print("")
-print(modified_text)
+final_text = changed_split_text.replace(' .', '.').replace(' ,', ',').\
+    replace(' ?', '?').replace(' !', '!')
+print(final_text)
 
-# Create a new text file of the updated mad libs.
-new_text_file = open("C:/Users/muadz/Documents/NewMadLibs.txt", 'w')
-new_text = new_text_file.write(modified_text)
+complete_text_file = open("C:/Users/muadz/Documents/NewMadLibs.txt", 'w')
+final_text_file = complete_text_file.write(final_text)
+complete_text_file.close()
