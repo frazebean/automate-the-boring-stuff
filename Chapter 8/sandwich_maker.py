@@ -15,7 +15,8 @@ bread_type = pyip.inputMenu(
     ["wheat", "white", "sourdough"], prompt="\nBread type:\n")
 print(f"\nYou chose {bread_type}. Price is ${price[bread_type]}")
 
-# User prompted to choose protein type. Cannot be left blank or have wrong input.
+# User prompted to choose protein type. Cannot be left blank or have wrong 
+# input.
 protein_type = pyip.inputMenu(
     ["chicken", "turkey", "ham", "tofu"], prompt="\nProtein type:\n")
 print(f"\nYou chose {protein_type}. Price is ${price[protein_type]}")
@@ -58,8 +59,10 @@ else:
 sandwich_number = pyip.inputInt(
     "\nHow many sandwiches would you like? : ", min=1)
 
-total_price = sandwich_number * (price[bread_type] + price[protein_type] + price[cheese_type]
-                                 + price['mayonnaise'] + price['mustard'] + price['lettuce'] +
+total_price = sandwich_number * (price[bread_type] + price[protein_type] +
+                                 price[cheese_type]
+                                 + price['mayonnaise'] + price['mustard'] +
+                                 price['lettuce'] +
                                  price['tomato'])
 
 print(f"${total_price}")
