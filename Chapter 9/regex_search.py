@@ -18,4 +18,5 @@ for file in os.listdir(Path.home()/"Documents"/"Regex Search"):
     if regex_found != []:
         print(f"\nRegular expressions matched: {regex_found}")
     else:
-        print(f"\nNo regular expressions matched with the term '{user_regex_input}'.")
+        print(f"\nNo regular expressions matched with the term \
+              '{user_regex_input}'.")
